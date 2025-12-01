@@ -1,0 +1,8 @@
+{
+  "sound_event": "tracethelight:music.happy_restaurant",
+  "length_in_seconds": 180,
+  "comparator_output": 15,
+  "description": {
+    "translate": "jukebox_song.tracethelight.happy_restaurant"
+  }
+}

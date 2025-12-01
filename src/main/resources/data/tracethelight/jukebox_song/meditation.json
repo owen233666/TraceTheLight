@@ -1,0 +1,8 @@
+{
+  "sound_event": "tracethelight:music.meditation",
+  "length_in_seconds": 516,
+  "comparator_output": 15,
+  "description": {
+    "translate": "jukebox_song.tracethelight.meditation"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "music.meditation": {
+    "sounds": [
+      {
+        "name": "tracethelight:records/meditation",
+        "stream": true
+      }
+    ]
+  },
+  "music.utopia": {
+    "sounds": [
+      {
+        "name": "tracethelight:records/utopia",
+        "stream": true
+      }
+    ]
+  },
+  "music.remember_who_you_are": {
+    "sounds": [
+      {
+        "name": "tracethelight:records/remember_who_you_are",
+        "stream": true
+      }
+    ]
+  },
+  "music.scarborough_fair": {
+    "sounds": [
+      {
+        "name": "tracethelight:records/scarborough_fair",
+        "stream": true
+      }
+    ]
+  },
+  "music.happy_restaurant": {
+    "sounds": [
+      {
+        "name": "tracethelight:records/happy_restaurant",
+        "stream": true
+      }
+    ]
+  }
+}

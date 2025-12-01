@@ -1,0 +1,8 @@
+{
+  "sound_event": "tracethelight:music.utopia",
+  "length_in_seconds": 223,
+  "comparator_output": 15,
+  "description": {
+    "translate": "jukebox_song.tracethelight.utopia"
+  }
+}

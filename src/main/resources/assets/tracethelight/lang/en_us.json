@@ -1,0 +1,21 @@
+{
+  "itemGroup.tracethelight": "Trace The Light",
+  "item.tracethelight.music_disc.meditation": "Music Disc",
+  "item.tracethelight.music_disc.utopia": "Music Disc",
+  "item.tracethelight.music_disc.remember_who_you_are": "Music Disc",
+  "item.tracethelight.music_disc.scarborough_fair": "Music Disc",
+  "item.tracethelight.music_disc.happy_restaurant": "Music Disc",
+  "jukebox_song.tracethelight.meditation": "Cory Wong - Meditation",
+  "jukebox_song.tracethelight.utopia": "Cory Wong - Utopia",
+  "jukebox_song.tracethelight.remember_who_you_are": "Jessie Ware - Remember Where You Are",
+  "jukebox_song.tracethelight.scarborough_fair": "山田タマル - Scarborough Fair",
+  "jukebox_song.tracethelight.happy_restaurant": "弌誠 - しあわせレストラン",
+
+  "tracethelight.configuration.title": "Trace the Light Configs",
+  "tracethelight.configuration.section.tracethelight.common.toml": "Trace the Light Configs",
+  "tracethelight.configuration.section.tracethelight.common.toml.title": "Trace the Light Configs",
+  "tracethelight.configuration.items": "Item List",
+  "tracethelight.configuration.logDirtBlock": "Log Dirt Block",
+  "tracethelight.configuration.magicNumberIntroduction": "Magic Number Text",
+  "tracethelight.configuration.magicNumber": "Magic Number"
+}

@@ -1,0 +1,8 @@
+{
+  "sound_event": "tracethelight:music.scarborough_fair",
+  "length_in_seconds": 151,
+  "comparator_output": 15,
+  "description": {
+    "translate": "jukebox_song.tracethelight.scarborough_fair"
+  }
+}
