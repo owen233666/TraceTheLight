@@ -7,12 +7,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(AnvilMenu.class)
 public class AnvilMenuMixin {
-    @ModifyConstant(
-            method = "validateName(Ljava/lang/String;)Ljava/lang/String;",
-            constant = @Constant(intValue = 50)
-    )
-    private static int validateName(int constant){
-
-        return 256;
+    @ModifyConstant(method = {"setItemName", "validateName"}, constant = @Constant(intValue = 50))
+    private static int modifyMaxNameLength(int original) {
+        return 512;
     }
 }

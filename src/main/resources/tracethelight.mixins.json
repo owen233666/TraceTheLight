@@ -3,7 +3,8 @@
   "package": "cn.owen233666.tracethelight.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AnvilMenuMixin"
+    "AnvilMenuMixin",
+    "AnvilScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
