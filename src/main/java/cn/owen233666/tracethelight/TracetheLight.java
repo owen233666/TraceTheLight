@@ -4,8 +4,6 @@ import cn.owen233666.tracethelight.creativetab.ModcreativeTab;
 import cn.owen233666.tracethelight.items.ModItems;
 import cn.owen233666.tracethelight.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
