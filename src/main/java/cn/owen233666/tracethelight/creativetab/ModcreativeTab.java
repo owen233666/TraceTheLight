@@ -20,7 +20,11 @@ public class ModcreativeTab {
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.MEDITATION.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(ModItems.MEDITATION.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(ModItems.MEDITATION.get());
+                output.accept(ModItems.UTOPIA.get());
+                output.accept(ModItems.REMEMBER_WHO_YOU_ARE.get());
+                output.accept(ModItems.SCARBOROUGH_FAIR.get());
+                output.accept(ModItems.HAPPY_RESTAURANT.get());
             }).build());
 
 }

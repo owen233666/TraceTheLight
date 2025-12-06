@@ -19,6 +19,14 @@ group = mod_group_id
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    // for development builds
+    maven {
+        name = 'central-snapshots'
+        url = 'https://central.sonatype.com/repository/maven-snapshots/'
+        mavenContent { snapshotsOnly() }
+    }
+    // for releases
+    mavenCentral()
 }
 
 base {
@@ -133,6 +141,8 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // NeoGradle/ModDevGradle/VanillaGradle project
+    compileOnly('net.kyori:adventure-platform-mod-shared:6.0.0')
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

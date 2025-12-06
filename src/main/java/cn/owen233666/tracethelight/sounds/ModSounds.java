@@ -15,7 +15,8 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> MEDITATION_MUSIC             =   registerSoundEvent("music.meditation");
     public static final DeferredHolder<SoundEvent, SoundEvent> UTOPIA_MUSIC                 =   registerSoundEvent("music.utopia");
     public static final DeferredHolder<SoundEvent, SoundEvent> REMEMBER_WHO_YOU_ARE_MUSIC   =   registerSoundEvent("music.remember_who_you_are");
-//    public static final DeferredHolder<SoundEvent, SoundEvent>
+    public static final DeferredHolder<SoundEvent, SoundEvent> SCARBOROUGH_FAIR_MUSIC       =   registerSoundEvent("music.scarborough_fair");
+    public static final DeferredHolder<SoundEvent, SoundEvent> HAPPY_RESTAURANT             =   registerSoundEvent("music.happy_restaurant");
 
     private static DeferredHolder<SoundEvent, SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(TracetheLight.MODID, name)));
