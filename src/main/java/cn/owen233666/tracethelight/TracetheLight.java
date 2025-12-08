@@ -1,9 +1,13 @@
 package cn.owen233666.tracethelight;
 
+import cn.owen233666.tracethelight.attachment.ModAttachmentType;
 import cn.owen233666.tracethelight.creativetab.ModcreativeTab;
+import cn.owen233666.tracethelight.events.ConfigReloadEventHandler;
+import cn.owen233666.tracethelight.init.ModAudience;
 import cn.owen233666.tracethelight.items.ModItems;
 import cn.owen233666.tracethelight.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
+import net.kyori.adventure.platform.modcommon.MinecraftAudiences;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -29,6 +33,8 @@ public class TracetheLight {
         ModItems.ITEMS.register(modEventBus);
         ModSounds.SOUND_EVENTS.register(modEventBus);
         ModcreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
+        ModAttachmentType.ATTACHMENT_TYPES.register(modEventBus);
+        ModAudience.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -36,19 +42,10 @@ public class TracetheLight {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-//        LOGGER.info("HELLO FROM COMMON SETUP");
-//
-//        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-//            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-//        }
-//
-//        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-//
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
+        LOGGER.info("HELLO FROM COMMON SETUP");
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        ConfigReloadEventHandler.DEFAULT_TITLE = Config.DEFAULT_TITLE.get();
     }
 }
