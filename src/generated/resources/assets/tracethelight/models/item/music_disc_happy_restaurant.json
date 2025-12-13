@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tracethelight:item/music_disc_happy_restaurant"
+  }
+}

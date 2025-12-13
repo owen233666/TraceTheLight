@@ -17,5 +17,6 @@
   "tracethelight.configuration.items": "Item List",
   "tracethelight.configuration.logDirtBlock": "Log Dirt Block",
   "tracethelight.configuration.magicNumberIntroduction": "Magic Number Text",
-  "tracethelight.configuration.magicNumber": "Magic Number"
+  "tracethelight.configuration.magicNumber": "Magic Number",
+  "tracethelight.message.err.componentconverterr": "Failed to serialize AdventureComponent!"
 }
