@@ -3,7 +3,7 @@ package cn.owen233666.tracethelight.events;
 import cn.owen233666.tracethelight.TracetheLight;
 import cn.owen233666.tracethelight.attachment.CustomTitle;
 import cn.owen233666.tracethelight.attachment.ModAttachmentType;
-import cn.owen233666.tracethelight.init.ModAudience;
+import cn.owen233666.tracethelight.init.ModAudiences;
 import cn.owen233666.tracethelight.utils.ConvertHexColor;
 import cn.owen233666.tracethelight.utils.ConvertMapColor;
 import net.kyori.adventure.text.Component;
@@ -31,13 +31,13 @@ public class ServerChatEventHandler {
                     ConvertHexColor.convertHexColorCodes(
                             ConvertMapColor.convertMapColorCodes(ConfigReloadEventHandler.DEFAULT_TITLE)
                     ) +
-                    "]");
+                    "<reset>]");
         }else {
             Player_Title_Component = MiniMessage.miniMessage().deserialize("[" + Player_Title_String + "]");
         }
         Component Message = assembleComponent(Player_Title_Component, Player_Name, Component.text(": "), Player_Message);
-        ModAudience.TraceTheLightAudiences.players().sendMessage(Message);
-        ModAudience.TraceTheLightAudiences.console().sendMessage(Message);
+        ModAudiences.TraceTheLightAudiences.players().sendMessage(Message);
+        ModAudiences.TraceTheLightAudiences.console().sendMessage(Message);
     }
 
     public static Component assembleComponent(Component... components){

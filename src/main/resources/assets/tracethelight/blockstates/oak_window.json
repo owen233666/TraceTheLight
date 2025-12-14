@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "is_corner=false,facing=north,above=false,below=false,south=false,north=false,west=false,east=false": {
+      "model": "tracethelight:block/resizable/oak_af_bf_lf_rf"
+    },
+    "is_corner=false,facing=north,above=true,below=false,south=false,north=false,west=false,east=false": {
+      "model": "tracethelight:block/resizable/oak_at_bf_lf_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=true,south=false,north=false,west=false,east=false": {
+      "model": "tracethelight:block/resizable/oak_af_bt_lf_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=false,south=false,north=false,west=true,east=false": {
+      "model": "tracethelight:block/resizable/oak_af_bf_lt_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=false,south=false,north=false,west=false,east=true": {
+      "model": "tracethelight:block/resizable/oak_af_bf_lf_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=true,south=false,north=false,west=false,east=false": {
+      "model": "tracethelight:block/resizable/oak_at_bt_lf_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=true,south=false,north=false,west=true,east=false": {
+      "model": "tracethelight:block/resizable/oak_af_bt_lt_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=false,south=false,north=false,west=true,east=true": {
+      "model": "tracethelight:block/resizable/oak_af_bf_lt_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=false,south=false,north=false,west=false,east=true": {
+      "model": "tracethelight:block/resizable/oak_at_bf_lf_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=false,south=false,north=false,west=true,east=false": {
+      "model": "tracethelight:block/resizable/oak_at_bf_lt_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=true,south=false,north=false,west=false,east=true": {
+      "model": "tracethelight:block/resizable/oak_af_bt_lf_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=true,south=false,north=false,west=true,east=false": {
+      "model": "tracethelight:block/resizable/oak_at_bt_lt_rf"
+    },
+    "is_corner=false,facing=north,above=false,below=true,south=false,north=false,west=true,east=true": {
+      "model": "tracethelight:block/resizable/oak_af_bt_lt_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=false,south=false,north=false,west=true,east=true": {
+      "model": "tracethelight:block/resizable/oak_at_bf_lt_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=true,south=false,north=false,west=false,east=true": {
+      "model": "tracethelight:block/resizable/oak_at_bt_lf_rt"
+    },
+    "is_corner=false,facing=north,above=true,below=true,south=false,north=false,west=true,east=true": {
+      "model": "tracethelight:block/resizable/oak_at_bt_lt_rt"
+    }
+  }
+}

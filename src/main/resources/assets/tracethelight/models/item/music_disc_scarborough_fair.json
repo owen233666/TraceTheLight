@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "tracethelight:item/music_disc_scarborough_fair"
-  }
-}

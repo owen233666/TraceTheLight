@@ -1,13 +1,13 @@
 package cn.owen233666.tracethelight;
 
 import cn.owen233666.tracethelight.attachment.ModAttachmentType;
-import cn.owen233666.tracethelight.creativetab.ModcreativeTab;
+import cn.owen233666.tracethelight.block.ModBlocks;
+import cn.owen233666.tracethelight.creativetab.ModcreativeTabs;
 import cn.owen233666.tracethelight.events.ConfigReloadEventHandler;
-import cn.owen233666.tracethelight.init.ModAudience;
+import cn.owen233666.tracethelight.init.ModAudiences;
 import cn.owen233666.tracethelight.items.ModItems;
 import cn.owen233666.tracethelight.sounds.ModSounds;
 import com.mojang.logging.LogUtils;
-import net.kyori.adventure.platform.modcommon.MinecraftAudiences;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -31,10 +31,12 @@ public class TracetheLight {
         modEventBus.addListener(this::commonSetup);
 
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         ModSounds.SOUND_EVENTS.register(modEventBus);
-        ModcreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
+        ModcreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModAttachmentType.ATTACHMENT_TYPES.register(modEventBus);
-        ModAudience.register(modEventBus);
+        ModAudiences.register(modEventBus);
+
 
         NeoForge.EVENT_BUS.register(this);
 

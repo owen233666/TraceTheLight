@@ -10,7 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import static cn.owen233666.tracethelight.TracetheLight.MODID;
 
-public class ModcreativeTab {
+public class ModcreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("trace_the_light_tab", () -> CreativeModeTab.builder()
@@ -23,6 +23,7 @@ public class ModcreativeTab {
                 output.accept(ModItems.REMEMBER_WHO_YOU_ARE.get());
                 output.accept(ModItems.SCARBOROUGH_FAIR.get());
                 output.accept(ModItems.HAPPY_RESTAURANT.get());
+                output.accept(ModItems.OAK_WINDOW.get());
             }).build());
 
 }

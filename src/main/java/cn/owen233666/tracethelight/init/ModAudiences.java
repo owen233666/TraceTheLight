@@ -10,11 +10,11 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.event.server.ServerStoppedEvent;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 
-public class ModAudience {
+public class ModAudiences {
     public static volatile MinecraftServerAudiences TraceTheLightAudiences;
 
     public static void register(IEventBus modEventBus) {
-        NeoForge.EVENT_BUS.register(ModAudience.class);
+        NeoForge.EVENT_BUS.register(ModAudiences.class);
     }
 
     public static MinecraftServerAudiences adventure() {
