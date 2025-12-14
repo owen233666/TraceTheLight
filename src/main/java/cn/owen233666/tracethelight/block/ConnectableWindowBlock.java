@@ -71,31 +71,20 @@ public class ConnectableWindowBlock extends Block {
         boolean south = level.getBlockState(pos.south()).getBlock() == this;
         boolean west  = level.getBlockState(pos.west()) .getBlock() == this;
         Direction facing = state.getValue(FACING);
-        boolean is_corner = false;
-        int cornerAmount = (north ? 1 : 0) + (south ? 1 : 0) + (east ? 1 :0 ) + (west ? 1 : 0);
-        if(cornerAmount == 2){
-            if(facing.equals(Direction.NORTH)){
-                if((north && level.getBlockState(pos.north()).getValue(FACING).equals(Direction.EAST)) && (east && level.getBlockState(pos.east()).getValue(FACING).equals(facing))) is_corner=true;
-                if((north && level.getBlockState(pos.north()).getValue(FACING).equals(Direction.EAST)) && (west && level.getBlockState(pos.west()).getValue(FACING).equals(facing))) is_corner=true;
-                if((south && level.getBlockState(pos.south()).getValue(FACING).equals(Direction.EAST)) && (east && level.getBlockState(pos.east()).getValue(FACING).equals(facing))) is_corner=true;
-                if((south && level.getBlockState(pos.south()).getValue(FACING).equals(Direction.EAST)) && (west && level.getBlockState(pos.west()).getValue(FACING).equals(facing))) is_corner=true;
-            }else {
-                is_corner = false;
-            }
-        }
+        boolean is_corner = isCorner(facing, north, south, east, west, level, pos);
+
+
         // 每次setValue都需要重新赋值给state变量
         state = state.setValue(ABOVE, above && level.getBlockState(pos.above()).getValue(FACING).equals(facing));
         state = state.setValue(BELOW, below && level.getBlockState(pos.below()).getValue(FACING).equals(facing));
 
         if(is_corner){
             state = state.setValue(IS_CORNER, true)
-                    .setValue(CORNER_TYPE, CornerType.RIGHT);
-            // 清除其他方向属性
-            state = state.setValue(NORTH, false)
-                    .setValue(SOUTH, false)
-                    .setValue(EAST, false)
-                    .setValue(WEST, false);
-            return state;
+                    .setValue(CORNER_TYPE, CornerType.RIGHT)
+                    .setValue(NORTH, north)
+                    .setValue(SOUTH, south)
+                    .setValue(EAST, east)
+                    .setValue(WEST, west);
         } else {
             state = state.setValue(IS_CORNER, false);
 
@@ -186,6 +175,7 @@ public class ConnectableWindowBlock extends Block {
         return WindowState(stateWithFacing, world, pos);
     }
 
+
     public enum CornerType implements StringRepresentable{
         RIGHT("right"),
         ROUNDED("rounded");
@@ -198,15 +188,22 @@ public class ConnectableWindowBlock extends Block {
         }
     }
 
-    private boolean isCorner(Direction facing1, Direction facing2, boolean north, boolean south, boolean east, boolean west){
-        if(!(facing1 == facing2)){
-            return false;
-        }
-        if((north ? 1 : 0) + (south ? 1 : 0) + (east ? 1 :0 ) + (west ? 1 : 0) == 2){
-            if(north && west) return true;
-            if(north && east) return true;
-            if(south && west) return true;
-            return south && east;
+    private boolean isCorner(Direction facing, boolean north, boolean south, boolean east, boolean west, LevelAccessor level, BlockPos pos){
+        int cornerAmount = (north ? 1 : 0) + (south ? 1 : 0) + (east ? 1 :0 ) + (west ? 1 : 0);
+        if(cornerAmount == 2){
+            if(facing.equals(Direction.NORTH)){
+                if((north && level.getBlockState(pos.north()).getValue(FACING).equals(Direction.EAST)) && (east && level.getBlockState(pos.east()).getValue(FACING).equals(facing))) return true;
+                if((north && level.getBlockState(pos.north()).getValue(FACING).equals(Direction.EAST)) && (west && level.getBlockState(pos.west()).getValue(FACING).equals(facing))) return true;
+                if((south && level.getBlockState(pos.south()).getValue(FACING).equals(Direction.EAST)) && (east && level.getBlockState(pos.east()).getValue(FACING).equals(facing))) return true;
+                if((south && level.getBlockState(pos.south()).getValue(FACING).equals(Direction.EAST)) && (west && level.getBlockState(pos.west()).getValue(FACING).equals(facing))) return true;
+                return false;
+            }else {
+                if((east && level.getBlockState(pos.east()).getValue(FACING).equals(Direction.NORTH)) && (north && level.getBlockState(pos.north()).getValue(FACING).equals(facing))) return true;
+                if((east && level.getBlockState(pos.east()).getValue(FACING).equals(Direction.NORTH)) && (south && level.getBlockState(pos.south()).getValue(FACING).equals(facing))) return true;
+                if((west && level.getBlockState(pos.west()).getValue(FACING).equals(Direction.NORTH)) && (north && level.getBlockState(pos.north()).getValue(FACING).equals(facing))) return true;
+                if((west && level.getBlockState(pos.west()).getValue(FACING).equals(Direction.NORTH)) && (south && level.getBlockState(pos.south()).getValue(FACING).equals(facing))) return true;
+                return false;
+            }
         }else {
             return false;
         }

@@ -1,0 +1,46 @@
+{
+	"render_type": "cutout_mipped",
+	"elements": [
+		{
+			"from": [7, 0, 0],
+			"to": [9, 16, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"east": {"uv": [9, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [16, 0, 9, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 0, 7],
+			"to": [7, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 7]},
+			"faces": {
+				"north": {"uv": [7, 0, 0, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 7, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0, 7],
+			"to": [9, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"east": {"uv": [9, 0, 7, 16], "texture": "#0"},
+				"south": {"uv": [7, 0, 9, 16], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "glass",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		},
+		{
+			"name": "frame",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": []
+		}
+	]
+}
