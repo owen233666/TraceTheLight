@@ -1,9 +1,6 @@
 package cn.owen233666.tracethelight.datagen;
 
 import cn.owen233666.tracethelight.TracetheLight;
-import cn.owen233666.tracethelight.block.ConnectableWindowBlock;
-import cn.owen233666.tracethelight.block.ModBlocks;
-import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
