@@ -1,7 +1,6 @@
 package cn.owen233666.tracethelight;
 
 import cn.owen233666.tracethelight.attachment.ModAttachmentType;
-import cn.owen233666.tracethelight.block.ModBlocks;
 import cn.owen233666.tracethelight.creativetab.ModcreativeTabs;
 import cn.owen233666.tracethelight.events.ConfigReloadEventHandler;
 import cn.owen233666.tracethelight.init.ModAudiences;

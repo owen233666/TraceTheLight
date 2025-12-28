@@ -1,13 +1,11 @@
 package cn.owen233666.tracethelight.items;
 
 import cn.owen233666.tracethelight.TracetheLight;
-import cn.owen233666.tracethelight.block.ModBlocks;
 import cn.owen233666.tracethelight.utils.ItemPropertiesHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.neoforge.registries.DeferredHolder;
