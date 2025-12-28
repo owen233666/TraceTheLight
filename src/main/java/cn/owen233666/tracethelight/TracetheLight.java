@@ -31,7 +31,7 @@ public class TracetheLight {
         modEventBus.addListener(this::commonSetup);
 
         ModItems.ITEMS.register(modEventBus);
-        ModBlocks.BLOCKS.register(modEventBus);
+//        ModBlocks.BLOCKS.register(modEventBus);
         ModSounds.SOUND_EVENTS.register(modEventBus);
         ModcreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModAttachmentType.ATTACHMENT_TYPES.register(modEventBus);

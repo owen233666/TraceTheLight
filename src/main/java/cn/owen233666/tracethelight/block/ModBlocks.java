@@ -10,8 +10,4 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, TracetheLight.MODID);
-
-    public static final DeferredHolder<Block, ConnectableWindowBlock> OAK_WINDOW = BLOCKS.register("oak_window", () -> new ConnectableWindowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).sound(SoundType.WOOD).strength(0.6F, 1.2F).noOcclusion()));
-
 }

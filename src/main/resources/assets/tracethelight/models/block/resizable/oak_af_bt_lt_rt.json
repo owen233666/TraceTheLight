@@ -1,9 +1,0 @@
-
-{
-  "parent": "tracethelight:block/parent/window/window_af_bt_lt_rt",
-  "textures": {
-    "0": "minecraft:block/oak_log",
-    "2": "tracethelight:block/glass_noframe",
-    "particle": "minecraft:block/oak_log"
-  }
-}

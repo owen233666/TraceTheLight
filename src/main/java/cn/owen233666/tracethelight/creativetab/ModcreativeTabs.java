@@ -24,6 +24,13 @@ public class ModcreativeTabs {
                 output.accept(ModItems.SCARBOROUGH_FAIR.get());
                 output.accept(ModItems.HAPPY_RESTAURANT.get());
                 output.accept(ModItems.OAK_WINDOW.get());
+                output.accept(ModItems.STRIPPED_OAK_WINDOW.get());
+                output.accept(ModItems.OAK_PLANK_WINDOW.get());
+                output.accept(ModItems.SPRUCE_WINDOW.get());
+                output.accept(ModItems.STRIPPED_SPRUCE_WINDOW.get());
+                output.accept(ModItems.SPRUCE_PLANK_WINDOW.get());
+                output.accept(ModItems.BIRCH_WINDOW.get());
+                output.accept(ModItems.STRIPPED_BIRCH_WINDOW.get());
             }).build());
 
 }
